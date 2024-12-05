@@ -1,0 +1,975 @@
+Date: Mon, 2 Dec 2024 15:24:53 +0000 (UTC)
+Message-ID: <530237313.21.1733153093920@1c605675fccb>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_20_791204410.1733153093920"
+
+------=_Part_20_791204410.1733153093920
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>How to Deploy to Production using TeamCity</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>How to Deploy to Production using TeamCity</h1>
+    <div class=3D"Section1">
+        <div class=3D"contentLayout2">
+<style>[data-colorid=3Diku6qav7n2]{color:#1f2326} html[data-color-mode=3Dda=
+rk] [data-colorid=3Diku6qav7n2]{color:#d9dde0}</style>
+<div class=3D"columnLayout two-right-sidebar" data-layout=3D"two-right-side=
+bar">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<h1 id=3D"HowtoDeploytoProductionusingTeamCity-Introduction">Introduction</=
+h1>
+<p>This article talks the reader through deploying to Production (OAT/Live)=
+ using TeamCity in Docker compose.</p>
+<p>Only TeamCity users with the Ops role (e.g. members of the XpertHR SRE g=
+roup and Technical Exec team) can run these deployments.</p>
+<p>All the deployments are based on the TeamCity templates, so template cha=
+nges will affect ALL the deployments.</p>
+<div class=3D"confluence-information-macro confluence-information-macro-not=
+e">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-warning confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p>This article also assumes that:</p>
+<ul>
+<li>The application secrets have packaged correctly beforehand (see:&nbsp;<=
+a href=3D"/wiki/spaces/DEV/pages/71321306/Packaging+and+Deploying+Secrets" =
+data-linked-resource-id=3D"71321306" data-linked-resource-version=3D"2" dat=
+a-linked-resource-type=3D"page">Packaging and Deploying Secrets</a>)</li>
+<li>A new Release Request has been raised correctly beforehand (see: <a hre=
+f=3D"/wiki/spaces/SRE/pages/71532666/How+to+Write+a+Release+Request" data-l=
+inked-resource-id=3D"71532666" data-linked-resource-version=3D"71" data-lin=
+ked-resource-type=3D"page">How to Write a Release Request</a>)</li>
+</ul>
+</div>
+</div>
+<h1 id=3D"HowtoDeploytoProductionusingTeamCity-DeployingtoOATandLive-TwoLeg=
+gedDeployment">Deploying to OAT and Live - Two Legged Deployment</h1>
+<h2 id=3D"HowtoDeploytoProductionusingTeamCity-Overview">Overview</h2>
+<p>Ensure you are familar with the load balancing (AKA "leg switching") in =
+Production, see:&nbsp;<a href=3D"/wiki/spaces/SRE/pages/71534506/Load+Balan=
+cer+Switching" data-linked-resource-id=3D"71534506" data-linked-resource-ve=
+rsion=3D"6" data-linked-resource-type=3D"page">Load Balancer Switching</a><=
+/p>
+<h2 id=3D"HowtoDeploytoProductionusingTeamCity-TeamCityDeploymentBuilds">Te=
+amCity Deployment Builds</h2>
+<p>Each environment (combinations of OAT/Live US/GB) has the following Team=
+City builds, which should all be based off templates, they are:</p>
+<ul>
+<li>Deploy Leg 1
+<ul>
+<li>Deploys leg 1, <strong>ALWAYS deploy leg 1 BEFORE leg 2!</strong></li>
+</ul></li>
+<li>Deploy Leg 2
+<ul>
+<li>Deploys leg 2, after leg 1</li>
+</ul></li>
+<li>Post Deploy
+<ul>
+<li>Puts both legs back in the balance</li>
+</ul></li>
+<li>Start Servers
+<ul>
+<li>Only for OAT</li>
+<li>TeamCity will start the OAT servers at 6am (UK time) on Friday mornings=
+</li>
+<li>If you would like to do an OAT deployment outside the release cycle, yo=
+u need to start the servers before starting the deployment.&nbsp; When you =
+do this, give the OAT servers a few minutes to warm up.&nbsp; Also check th=
+e Docker status using Get Docker Status (see below).</li>
+</ul></li>
+<li>Stop Servers
+<ul>
+<li>Only for OAT&nbsp;</li>
+<li>TeamCity will stop the OAT servers at 11pm (UK time) every day</li>
+</ul></li>
+<li>Run once task
+<ul>
+<li>Please see the list of applications you can run under Run once task nam=
+e of the build</li>
+</ul></li>
+<li>Run scheduled tasks
+<ul>
+<li>Please see the list of applications you can run under&nbsp;Run schedule=
+d tasks name of the build</li>
+</ul></li>
+<li>Get Docker Status
+<ul>
+<li>You can run the Get Docker Status to see the health of the containers</=
+li>
+</ul></li>
+<li>Manage Docker container
+<ul>
+<li>Allows to you to run docker logs/stop/start/restart/rm for a particular=
+ container</li>
+</ul></li>
+<li>Manage Docker-Compose
+<ul>
+<li>Allows to you to run docker-compose up/down on a particular Docker host=
+</li>
+</ul></li>
+<li>Manage Scheduled Tasks
+<ul>
+<li>Allows to you to get (the status of)/enable/disable a particular Schedu=
+led Task</li>
+</ul></li>
+<li>Switch to Leg1
+<ul>
+<li>When the site in load balance and require to take the leg2 out of the b=
+alance, run Switch to Leg1</li>
+</ul></li>
+<li>Switch to Leg2
+<ul>
+<li>When the site in load balance and require to take the leg1 out of the b=
+alance, run Switch to Leg2</li>
+</ul></li>
+<li>BoostrapWindowsDockerHost
+<ul>
+<li><strong>DO NOT USE</strong> - only used for preping a new Docker host</=
+li>
+</ul></li>
+</ul>
+<h2 id=3D"HowtoDeploytoProductionusingTeamCity-DeploySecrets">Deploy Secret=
+s</h2>
+<p>In the docker-compose world, secrets are deployed along with the contain=
+ers.&nbsp; Hence, secrets need to be packaged BEFORE the deployment - see&n=
+bsp;<a href=3D"/wiki/spaces/DEV/pages/71321306/Packaging+and+Deploying+Secr=
+ets" data-linked-resource-id=3D"71321306" data-linked-resource-version=3D"2=
+" data-linked-resource-type=3D"page">Packaging and Deploying Secrets</a></p=
+>
+<h2 id=3D"HowtoDeploytoProductionusingTeamCity-DeploymentSteps">Deployment =
+Steps</h2>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p>Our original convention was to always deploy to US first,&nbsp;nowadays =
+we are able to deploy both US and GB at the same time.&nbsp;&nbsp;However, =
+if there is any doubt or uncertainty about the deployment, deploy to the US=
+ first.</p>
+</div>
+</div>
+<div class=3D"confluence-information-macro confluence-information-macro-war=
+ning">
+<p class=3D"title">Build errors</p><span class=3D"aui-icon aui-icon-small a=
+ui-iconfont-error confluence-information-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p>Unfortunately, deployments do fail for many reasons...</p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+If you need help investigating TeamCity deployments errors be sure to provi=
+de the TeamCity URL of the build log.
+</div>
+</div>
+<h4 id=3D"HowtoDeploytoProductionusingTeamCity-Explicitfailures">Explicit f=
+ailures</h4>
+<p>The TeamCity deployment returns a failed status, take the time to look t=
+hrough the Build log of the deployment to see the errors.</p>
+<h4 id=3D"HowtoDeploytoProductionusingTeamCity-Slientfailures">Slient failu=
+res</h4>
+<p>The&nbsp;TeamCity deployments may repose a successful status even if the=
+ deployment failed - its always best to scan through the TeamCity Build log=
+.</p>
+<p>If the TeamCity deployments all look ok, then&nbsp;<strong>READ&nbsp;<a =
+style=3D"text-decoration: none;" href=3D"http://xperthr.atlassian.net/wiki/=
+display/SRE/Live+issues+diagnosis+steps" class=3D"external-link" rel=3D"nof=
+ollow">Live issues diagnosis steps</a>&nbsp;for guidance on how to diagnose=
+ deployment issues in OAT and Live</strong>.</p>
+</div>
+</div>
+<h3 id=3D"HowtoDeploytoProductionusingTeamCity-OAT">OAT</h3>
+<ol>
+<li>Start a new conversation thread in&nbsp;<a style=3D"letter-spacing: 0.0=
+px;" href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5fcb7764a5984f=
+9d2d3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releases?groupId=3D=
+562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9425-4109-a27f=
+-9fb15c10675d" class=3D"external-link" rel=3D"nofollow">Build Pick and Rele=
+ase MS Teams channel</a>&nbsp;<span>to say: "Release Request XXXXX (RRMS </=
+span><em>URL</em><span>)" - try to keep ALL chat (both OAT and Live)&nbsp;<=
+/span><span style=3D"letter-spacing: 0.0px;">about this Release Request in =
+the same conversation thread</span></li>
+<li>(<strong>OAT ONLY</strong>) Click run on the <strong>Start Servers</str=
+ong> build if the OAT servers are not online</li>
+<li>Wait for the servers to start, then run a <strong>Get Docker Status</st=
+rong> to check that Docker is running correctly on the OAT servers
+<ol>
+<li>If Get Docker Status fails, then check the TeamCity logs to see what th=
+e problem is</li>
+<li>If necessary, raise an issue in the <a href=3D"https://teams.microsoft.=
+com/l/channel/19%3Ae6262d352a024c3f9c6ecffe650a0739%40thread.tacv2/SRE%20He=
+lp%20and%20Support?groupId=3D55cf6edc-8027-4784-ada9-bb063a6a7b14&amp;tenan=
+tId=3D9274ee3f-9425-4109-a27f-9fb15c10675d" class=3D"external-link" rel=3D"=
+nofollow">SRE Help and Support</a> channel in Teams</li>
+</ol></li>
+<li>Click run on the <strong>Deploy Leg 1</strong> build
+<ol>
+<li>When prompted, enter the numeric Release Request number</li>
+<li>Select the Roles to be applied&nbsp;</li>
+<li>Select whether the deployment should be applied sequentially (seldom ch=
+ange this)</li>
+<li>Select whether the schedule tasks needs to be deployed (seldom change t=
+his)</li>
+<li>Copy the selected build numbers from the Build Pick and paste into note=
+pad to make sure the build numbers do not contain additional spacing and sp=
+ecial characters</li>
+<li>Copy the selected build numbers in notepad and paste into the to Versio=
+ns in TeamCity</li>
+<li>Click Run build</li>
+<li>Update the <a href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5=
+fcb7764a5984f9d2d3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releas=
+es?groupId=3D562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9=
+425-4109-a27f-9fb15c10675d" class=3D"external-link" rel=3D"nofollow">Build =
+Pick and Release MS Teams channel</a>&nbsp;thread to say: "<strong>OAT US (=
+or GB) Leg 1 is deploying</strong>"</li>
+</ol></li>
+<li>Click through the Build log of the deployment to ensure there are no er=
+rors.</li>
+<li>Go through the Get Docker Status build log (it will automatically run a=
+s part of the deployment) and check that all the containers are healthy.</l=
+i>
+<li>If Run once tasks and/or Run scheduler tasks were requested on release,=
+ run them accordingly - <em>see "Notes about Run Once Tasks"</em></li>
+<li>Click through the Build log of the deployment to ensure there are no er=
+rors.</li>
+<li>If the build has errors under Build log , read&nbsp;<a href=3D"/wiki/sp=
+aces/SRE/pages/71533506/Live+issues+diagnosis+steps" data-linked-resource-i=
+d=3D"71533506" data-linked-resource-version=3D"20" data-linked-resource-typ=
+e=3D"page">Live issues diagnosis steps</a></li>
+<li>Let the testers know so they can start testing Leg 1 by updating the <a=
+ href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5fcb7764a5984f9d2d=
+3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releases?groupId=3D562b=
+98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9425-4109-a27f-9fb=
+15c10675d" class=3D"external-link" rel=3D"nofollow">Build Pick and Release =
+MS Teams channel</a>&nbsp;thread to say: "<strong>OAT US (or GB) Leg 1 has =
+been deployed</strong>"</li>
+<li>When the testers have confirm that Leg 1 is good, click run on the <str=
+ong>Deploy Leg 2</strong>
+<ol>
+<li>When prompted, enter the numeric Release Request number</li>
+<li>Select the Roles to be applied&nbsp;</li>
+<li>Select whether the deployment should be applied sequentially (seldom ch=
+ange this)</li>
+<li>Select whether the schedule tasks needs to be deployed (seldom change t=
+his)</li>
+<li>Copy the selected build numbers from the Build Pick and paste into note=
+pad to make sure the build numbers do not contain additional spacing and sp=
+ecial characters</li>
+<li>Copy the selected build numbers in notepad and paste into the to Versio=
+ns in TeamCity</li>
+<li><span style=3D"letter-spacing: 0.0px;">Click Run build</span></li>
+<li>Update the <a href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5=
+fcb7764a5984f9d2d3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releas=
+es?groupId=3D562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9=
+425-4109-a27f-9fb15c10675d" class=3D"external-link" rel=3D"nofollow">Build =
+Pick and Release MS Teams channel</a>&nbsp;thread to say: "<strong>OAT US (=
+or GB) Leg 2 is deploying</strong>"</li>
+</ol></li>
+<li>Click through the Build log of the deployment to ensure there are no er=
+rors.</li>
+<li>Go through the Get Docker Status build log (it will automatically run a=
+s part of the deployment) and check that all the containers are healthy.</l=
+i>
+<li>The Run once tasks and Run Scheduler tasks are only require to be run o=
+n Leg1</li>
+<li>Let the testers know so they can start testing Leg 2&nbsp;by updating t=
+he <a href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5fcb7764a5984=
+f9d2d3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releases?groupId=
+=3D562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9425-4109-a=
+27f-9fb15c10675d" class=3D"external-link" rel=3D"nofollow">Build Pick and R=
+elease MS Teams channel</a>&nbsp;thread to say: <strong>"OAT US (or GB) Leg=
+ 2 has been deployed"</strong></li>
+<li>When the testers have confirm that Leg 2 is good, run the <strong>Post =
+Deploy</strong> build to put both servers back in the balance<br>
+<ol>
+<li>When prompted, enter the numeric Release Request number</li>
+<li>Select the Roles to be applied&nbsp;</li>
+<li>Select whether the deployment should be applied sequentially (seldom ch=
+ange this)</li>
+<li>Select whether the schedule tasks needs to be deployed (seldom change t=
+his)</li>
+<li>Copy the selected build numbers from the Build Pick and paste into note=
+pad to make sure the build numbers do not contain additional spacing and sp=
+ecial characters</li>
+<li>Copy the selected build numbers in notepad and paste into the to Versio=
+ns in TeamCity</li>
+<li><span style=3D"letter-spacing: 0.0px;">Click Run build</span></li>
+<li>Update the <a href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5=
+fcb7764a5984f9d2d3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releas=
+es?groupId=3D562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9=
+425-4109-a27f-9fb15c10675d" class=3D"external-link" rel=3D"nofollow">Build =
+Pick and Release MS Teams channel</a>&nbsp;thread to say: "OAT US (or GB) p=
+ost deployment steps are running"</li>
+</ol></li>
+<li>OAT servers will shut down automatically at 11pm UK time. If the server=
+s are not being used after testing, you can run on the <strong>Stop Servers=
+</strong> build</li>
+</ol>
+<br>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<p class=3D"title">Notes about Run Once Tasks</p><span class=3D"aui-icon au=
+i-icon-small aui-iconfont-approve confluence-information-macro-icon"></span=
+>
+<div class=3D"confluence-information-macro-body">
+<p>If a process like&nbsp;ArticleContentBulkUpdater updates content in the =
+database, then more than likely the&nbsp;ReindexOrchestrator and&nbsp;Cache=
+Warming will need to be run AFTER&nbsp;ArticleContentBulkUpdater has finish=
+ed, to reindex content and to recache content.&nbsp; If these are not speci=
+fied in the build pick, then check with the author of the build pick.</p>
+</div>
+</div>
+<h3 id=3D"HowtoDeploytoProductionusingTeamCity-Live">Live</h3>
+<div class=3D"confluence-information-macro confluence-information-macro-war=
+ning">
+<p class=3D"title">Check before you start the Live deployment</p><span clas=
+s=3D"aui-icon aui-icon-small aui-iconfont-error confluence-information-macr=
+o-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"71534522">
+<li data-inline-task-id=3D"4"><span class=3D"placeholder-inline-tasks">Has =
+the Release Request been approved by ALL approvers?</span></li>
+</ul>
+<ul>
+<li>If the Release Request is <em>not</em> approved, <strong>please ask the=
+ necessary approvers to approve the release</strong> before starting the re=
+lease.</li>
+<li>If an approver is away, then escalate the issue to ask someone to appro=
+ve in their absence.</li>
+<li><strong>DO NOT&nbsp;</strong>start the deployment unless the Release Re=
+quest is approved by all approvers</li>
+</ul>
+<p><br></p>
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"71534522">
+<li data-inline-task-id=3D"5"><span class=3D"placeholder-inline-tasks">Have=
+ the Emailer and Content Syndication Client scheduled tasks finished?</span=
+></li>
+</ul>
+<ul>
+<li>Check the <a href=3D"https://teams.microsoft.com/l/channel/19%3a7d3326a=
+73a0a43879e1a268ce7d384a6%40thread.tacv2/Alerts?groupId=3Df92420f5-a86f-47d=
+e-8f83-59a0dbb775f6&amp;tenantId=3D9274ee3f-9425-4109-a27f-9fb15c10675d" cl=
+ass=3D"external-link" rel=3D"nofollow">Polaris Alerts MS Teams channel</a> =
+for Emailer and Content Sydication Client finish reports</li>
+<li><strong>DO NOT&nbsp;</strong>start the deployment whilst the Emailer an=
+d Content Sydication Client are running</li>
+</ul>
+<p><br></p>
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"71534522">
+<li data-inline-task-id=3D"6"><span class=3D"placeholder-inline-tasks">Is L=
+ive ready for deployment?</span></li>
+</ul>
+<ul>
+<li><span class=3D"placeholder-inline-tasks"><strong>DO NOT</strong> start =
+the deployment if there is an ongoing live issue to make sure the live issu=
+e diagnosis is not interrupted</span></li>
+</ul>
+</div>
+</div>
+<div class=3D"confluence-information-macro confluence-information-macro-war=
+ning">
+<p class=3D"title">Be aware</p><span class=3D"aui-icon aui-icon-small aui-i=
+confont-error confluence-information-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p>Mistakes in the deployment can cause the production website outages!</p>
+<p>So please check the build numbers and make sure you have adequate suppor=
+t to diagnose any live issues before starting the release.</p>
+</div>
+</div>
+<p><br></p>
+<ol>
+<li>Click run on the <strong>Deploy Leg 1</strong> build
+<ol>
+<li>When prompted, enter the numeric Release Request number</li>
+<li>Select the Roles to be applied&nbsp;</li>
+<li>Select whether the deployment should be applied sequentially (seldom ch=
+ange this)</li>
+<li>Select whether the schedule tasks needs to be deployed (seldom change t=
+his)</li>
+<li>Copy the selected build numbers from the Build Pick and paste into note=
+pad to make sure the build numbers do not contain additional spacing and sp=
+ecial characters</li>
+<li>Copy the selected build numbers in notepad and paste into the to Versio=
+ns in TeamCity</li>
+<li><span style=3D"letter-spacing: 0.0px;">Click Run build</span></li>
+<li>Update the <a href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5=
+fcb7764a5984f9d2d3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releas=
+es?groupId=3D562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9=
+425-4109-a27f-9fb15c10675d" class=3D"external-link" rel=3D"nofollow">Build =
+Pick and Release MS Teams channel</a>&nbsp;thread to say: <strong>"Live US =
+(or GB) Leg 1 is deploying"</strong></li>
+</ol></li>
+<li>Click through the Build log of the deployment to ensure there are no er=
+rors.</li>
+<li>Go through the Get Docker Status build log (it will automatically run a=
+s part of the deployment) and check that all the containers are healthy.</l=
+i>
+<li>If Run once tasks and/or Run scheduler tasks were requested on release,=
+ run them accordingly - <em>see "Notes about Run Once Tasks"</em></li>
+<li>Click through the Build log of the deployment to ensure there are no er=
+rors.</li>
+<li>If the build has&nbsp;errors under Build log , read&nbsp;<a href=3D"/wi=
+ki/spaces/SRE/pages/71533506/Live+issues+diagnosis+steps" data-linked-resou=
+rce-id=3D"71533506" data-linked-resource-version=3D"20" data-linked-resourc=
+e-type=3D"page">Live issues diagnosis steps</a></li>
+<li>If the build is green, check then refresh the web browser to reveal the=
+ Puppet Deployments build tab</li>
+<li>Let the testers know so they can start testing Leg 1 by updating the <a=
+ href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5fcb7764a5984f9d2d=
+3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releases?groupId=3D562b=
+98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9425-4109-a27f-9fb=
+15c10675d" class=3D"external-link" rel=3D"nofollow">Build Pick and Release =
+MS Teams channel</a>&nbsp;thread to say: <strong>"Live US (or GB) Leg 1 has=
+ been deployed"</strong></li>
+<li>When the testers have confirm that Leg 1 is good, click run on the <str=
+ong>Deploy Leg 2</strong>
+<ol>
+<li>When prompted, enter the numeric Release Request number</li>
+<li>Select the Roles to be applied&nbsp;</li>
+<li>Select whether the deployment should be applied sequentially (seldom ch=
+ange this)</li>
+<li>Select whether the schedule tasks needs to be deployed (seldom change t=
+his)</li>
+<li>Copy the selected build numbers from the Build Pick and paste into note=
+pad to make sure the build numbers do not contain additional spacing and sp=
+ecial characters</li>
+<li>Copy the selected build numbers in notepad and paste into the to Versio=
+ns in TeamCity</li>
+<li><span style=3D"letter-spacing: 0.0px;">Click Run build</span></li>
+<li>Update the <a href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5=
+fcb7764a5984f9d2d3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releas=
+es?groupId=3D562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9=
+425-4109-a27f-9fb15c10675d" class=3D"external-link" rel=3D"nofollow">Build =
+Pick and Release MS Teams channel</a>&nbsp;thread to say: <strong>"Live US =
+(or GB) Leg 2 is deploying"</strong></li>
+</ol></li>
+<li>Click through the Build log of the deployment to ensure there are no er=
+rors.</li>
+<li>Go through the Get Docker Status build log (it will automatically run a=
+s part of the deployment) and check that all the containers are healthy.</l=
+i>
+<li>The Run once tasks and Run Scheduler tasks are only require to be run o=
+n Leg1</li>
+<li>Let the testers know so they can start testing Leg 2 by updating the <a=
+ href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5fcb7764a5984f9d2d=
+3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releases?groupId=3D562b=
+98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9425-4109-a27f-9fb=
+15c10675d" class=3D"external-link" rel=3D"nofollow">Build Pick and Release =
+MS Teams channel</a>&nbsp;thread to say: <strong>"Live US (or GB) Leg 2 has=
+ been deployed"</strong></li>
+<li>When the testers have confirm that Leg 2 is good, run the <strong>Post =
+Deploy</strong> build to put both servers back in the balance<br>
+<ol>
+<li>When prompted, enter the numeric Release Request number</li>
+<li>Select the Roles to be applied&nbsp;</li>
+<li>Select whether the deployment should be applied sequentially (seldom ch=
+ange this)</li>
+<li>Select whether the schedule tasks needs to be deployed (seldom change t=
+his)</li>
+<li>Copy the selected build numbers from the Build Pick and paste into note=
+pad to make sure the build numbers do not contain additional spacing and sp=
+ecial characters</li>
+<li>Copy the selected build numbers in notepad and paste into the to Versio=
+ns in TeamCity</li>
+<li><span style=3D"letter-spacing: 0.0px;">Click Run build</span></li>
+<li>Update the <a href=3D"https://teams.microsoft.com/l/channel/19%3a4469c5=
+fcb7764a5984f9d2d3f1c2bed6%40thread.skype/Build%2520Pick%2520and%2520Releas=
+es?groupId=3D562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9=
+425-4109-a27f-9fb15c10675d" class=3D"external-link" rel=3D"nofollow">Build =
+Pick and Release MS Teams channel</a>&nbsp;thread to say: "Live US (or GB) =
+post deployment steps are running"</li>
+</ol></li>
+</ol>
+<h2 id=3D"HowtoDeploytoProductionusingTeamCity-Roles">Roles</h2>
+<p>In the docker-compose world, we have dedicated servers for particular ro=
+les.&nbsp; Each role has multiple applications assigned to it.&nbsp; Also s=
+ome legs are balanced across multiple legs, some are not.</p>
+<div class=3D"table-wrap">
+<table class=3D"wrapped confluenceTable">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh">Role</th>
+<th class=3D"confluenceTh">Applications belongs to the role</th>
+<th colspan=3D"1" class=3D"confluenceTh">Legs</th>
+<th colspan=3D"1" class=3D"confluenceTh">Location</th>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Consumer</td>
+<td class=3D"confluenceTd">
+<p>AssetServer</p>
+<p>Article.API</p>
+<p>Enrichment.API</p>
+<p>HeaderFooterService</p>
+<p>Benchmarking (GB)</p>
+<p>LegalAdviceAdmin (GB)</p>
+<p>CalculatorService</p>
+<p>Consumer</p>
+<p>ContentService</p>
+<p>ContentSyndication</p>
+<p>DisplayModeService</p>
+<p>FESS (GB)</p>
+<p>Gateway</p>
+<p>LegalAdviceService (GB)</p>
+<p>Liveflo.API</p>
+<p>Liveflo.SPA</p>
+<p>SearchService</p>
+<p>SurveyService (GB)</p>
+<p>ViperWrapperAPI</p>
+<p>EventTrackApi</p>
+<p>UserInsightApi</p>
+<p>UserPersonalisationAPI</p>
+<p>XpsSPA (US)</p>
+<p>XpsAPI (US)</p>
+<p>XpsSPAV2 (US)</p>
+<p><span class=3D"mark error_msg">Rewardanalyticsbffapi (GB)</span></p>
+<p><span class=3D"mark error_msg">Rewardanalyticsdataapi (GB)</span></p>
+<p><span class=3D"mark error_msg">Rewardanalyticsspa (GB)</span></p>
+<p><span class=3D"mark error_msg">XhrHotlineService</span></p>
+<p><span class=3D"mark error_msg"><br>
+ChatAPI(US/GB/NL)</span></p></td>
+<td colspan=3D"1" class=3D"confluenceTd">1 &amp; 2</td>
+<td colspan=3D"1" class=3D"confluenceTd">US &amp; GB</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Editor</td>
+<td class=3D"confluenceTd">
+<p>Article.API</p>
+<p>BenchmarkingAdmin (GB)</p>
+<p>BOSS(GB)</p>
+<p>Core CMS</p>
+<p>Core CMS <span data-colorid=3D"iku6qav7n2">Custom Editors</span></p>
+<p>Core CMS Migrator</p>
+<p>Core CMS ContentProcessor</p>
+<p>CoreCmsAuth</p>
+<p>Editor</p>
+<p>Enrichment.API</p>
+<p>IndexService</p>
+<p>SearchService</p>
+<p>WorkflowService (GB)</p>
+<p>WorkflowServiceETL (GB)</p>
+<p>ViperWrapperAPI</p>
+<p>XhrHotlineCms</p>
+<p>XpsDataManagerCMS (US)</p>
+<p>XpsPolicyManagerCMS (US)<br><br>
+ChatCMS</p></td>
+<td colspan=3D"1" class=3D"confluenceTd">1 &amp; 2</td>
+<td colspan=3D"1" class=3D"confluenceTd">US &amp; GB</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">App</td>
+<td class=3D"confluenceTd">
+<p>Article.API</p>
+<p>ArticleArchiver</p>
+<p>ArticleContentBulkUpdater</p>
+<p>CacheWarmingService</p>
+<p>CachingService</p>
+<p>CloningService</p>
+<p>ContentReferenceBulkUpdate</p>
+<p>ContentService</p>
+<p>Core.Database</p>
+<p>Emailer</p>
+<p>Enrichment.API</p>
+<p>IndexGenerator</p>
+<p>IndexService</p>
+<p><span class=3D"legacy-color-text-default">MongoDBUpdater</span></p>
+<p>ReindexOrchestrator</p>
+<p>SearchTypeIndexer</p>
+<p>SquidexManager</p>
+<p>Tasks</p>
+<p>UserPreferenceUpdater (US)</p>
+<p>ViperWrapperAPI</p>
+<p>XpsDataImporter (US)</p>
+<p>XpsDocumentParser (US)</p>
+<p><span class=3D"legacy-color-text-default">XpsHandbookExporter (US)</span=
+></p>
+<p><span class=3D"legacy-color-text-default">XpsSquidexDataMigrator (US)<br=
+></span></p>
+<p><span class=3D"legacy-color-text-default">XpsAlertManager (US)</span></p=
+>
+<p><span class=3D"legacy-color-text-default">CommonEmailer</span></p>
+<p><span class=3D"legacy-color-text-default">XpsSquidexDataFix (US)</span><=
+/p>
+<p><span class=3D"legacy-color-text-default"><br>
+XpertHR.XPS.SquidexContentBulkUpdater<br></span></p></td>
+<td colspan=3D"1" class=3D"confluenceTd">1 only</td>
+<td colspan=3D"1" class=3D"confluenceTd">US &amp; GB</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">Boss</td>
+<td colspan=3D"1" class=3D"confluenceTd">
+<p>TaskEngine</p></td>
+<td colspan=3D"1" class=3D"confluenceTd">1 only</td>
+<td colspan=3D"1" class=3D"confluenceTd">GB only</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">Ftp</td>
+<td colspan=3D"1" class=3D"confluenceTd">
+<p>ContentSyndicationClient (US)</p>
+<p>XpsPolicyProcessor (US)</p>
+<p>XpsGraphdbImporter (US)</p></td>
+<td colspan=3D"1" class=3D"confluenceTd">1 only</td>
+<td colspan=3D"1" class=3D"confluenceTd">US only</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<p class=3D"title">Ftp role</p><span class=3D"aui-icon aui-icon-small aui-i=
+confont-approve confluence-information-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p>Ftp is not an FTP server, it is a special appserver with an Elastic IP s=
+o the ContentSydnciationClient can FTP a zip file to LexisNexis.</p>
+</div>
+</div>
+<h1 id=3D"HowtoDeploytoProductionusingTeamCity-UsefulInformation">Useful In=
+formation</h1>
+<h2 id=3D"HowtoDeploytoProductionusingTeamCity-NetworkDiagrams"><a href=3D"=
+/wiki/spaces/DEV/pages/71321742/Network+Diagrams" data-linked-resource-id=
+=3D"71321742" data-linked-resource-version=3D"14" data-linked-resource-type=
+=3D"page">Network Diagrams</a></h2>
+<h2 id=3D"HowtoDeploytoProductionusingTeamCity-KnowledgeTransferSessions"><=
+a href=3D"/wiki/spaces/DEV/pages/71321104/Knowledge+Transfer+Sessions" data=
+-linked-resource-id=3D"71321104" data-linked-resource-version=3D"2" data-li=
+nked-resource-type=3D"page">Knowledge Transfer Sessions</a></h2>
+<p><br></p>
+<p></p>
+<p></p>
+<ul class=3D"content-by-label">
+<li>
+<div>
+<span class=3D"icon aui-icon content-type-page" title=3D"Page">Page:</span>
+</div>
+<div class=3D"details">
+<a data-linked-resource-id=3D"71321632" data-linked-resource-type=3D"page" =
+data-linked-resource-version=3D"5" href=3D"/wiki/spaces/DEV/pages/71321632/=
+Configuring+NuGet+in+TeamCity">Configuring NuGet in TeamCity</a>
+</div></li>
+<li>
+<div>
+<span class=3D"icon aui-icon content-type-page" title=3D"Page">Page:</span>
+</div>
+<div class=3D"details">
+<a data-linked-resource-id=3D"71320392" data-linked-resource-type=3D"page" =
+data-linked-resource-version=3D"6" href=3D"/wiki/spaces/DEV/pages/71320392/=
+How+to+update+TeamCity+Build+Agents+in+XPA">How to update TeamCity Build Ag=
+ents in XPA</a>
+</div></li>
+<li>
+<div>
+<span class=3D"icon aui-icon content-type-page" title=3D"Page">Page:</span>
+</div>
+<div class=3D"details">
+<a data-linked-resource-id=3D"71320654" data-linked-resource-type=3D"page" =
+data-linked-resource-version=3D"1" href=3D"/wiki/spaces/DEV/pages/71320654/=
+TeamCity+2018.1.2+Upgrade">TeamCity 2018.1.2 Upgrade</a>
+</div></li>
+<li>
+<div>
+<span class=3D"icon aui-icon content-type-page" title=3D"Page">Page:</span>
+</div>
+<div class=3D"details">
+<a data-linked-resource-id=3D"71320034" data-linked-resource-type=3D"page" =
+data-linked-resource-version=3D"1" href=3D"/wiki/spaces/DEV/pages/71320034/=
+TeamCity+2017.1.2+Upgrade">TeamCity 2017.1.2 Upgrade</a>
+</div></li>
+<li>
+<div>
+<span class=3D"icon aui-icon content-type-page" title=3D"Page">Page:</span>
+</div>
+<div class=3D"details">
+<a data-linked-resource-id=3D"71318718" data-linked-resource-type=3D"page" =
+data-linked-resource-version=3D"34" href=3D"/wiki/spaces/DEV/pages/71318718=
+/TeamCity+v9+-+Linux+installation">TeamCity v9 - Linux installation</a>
+</div></li>
+</ul>
+<p></p>
+<p><br></p>
+</div>
+</div>
+<div class=3D"cell aside" data-type=3D"aside">
+<div class=3D"innerCell">
+<p>
+<style type=3D"text/css">/*<![CDATA[*/
+div.rbtoc1733153093907 {padding: 0px;}
+div.rbtoc1733153093907 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1733153093907 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style></p>
+<div class=3D"toc-macro rbtoc1733153093907">
+<ul class=3D"toc-indentation">
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-Introduction">Introduc=
+tion</a></li>
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-DeployingtoOATandLive-=
+TwoLeggedDeployment">Deploying to OAT and Live - Two Legged Deployment</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-Overview">Overview</a>=
+</li>
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-TeamCityDeploymentBuil=
+ds">TeamCity Deployment Builds</a></li>
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-DeploySecrets">Deploy =
+Secrets</a></li>
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-DeploymentSteps">Deplo=
+yment Steps</a>
+<ul class=3D"toc-indentation">
+<ul class=3D"toc-indentation">
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-Explicitfailures">Expl=
+icit failures</a></li>
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-Slientfailures">Slient=
+ failures</a></li>
+</ul>
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-OAT">OAT</a></li>
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-Live">Live</a></li>
+</ul></li>
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-Roles">Roles</a></li>
+</ul></li>
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-UsefulInformation">Use=
+ful Information</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-NetworkDiagrams">Netwo=
+rk Diagrams</a></li>
+<li><a href=3D"#HowtoDeploytoProductionusingTeamCity-KnowledgeTransferSessi=
+ons">Knowledge Transfer Sessions</a></li>
+</ul></li>
+</ul>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+    </div>
+</body>
+</html>
+------=_Part_20_791204410.1733153093920--

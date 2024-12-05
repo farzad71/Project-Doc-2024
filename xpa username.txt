@@ -1,0 +1,78 @@
+Docker/Jira
+zamif@xpa.rbxd.ds
+Freedom71&
+
+Squidex
+UserName: farzad.zami@lexisnexisrisk.com
+Password: Welcome@1
+Live Password: Welcome@123
+Play Ground Password:Farzad@123
+Dev Password:Welcome@123
+
+RRMS:
+zamif
+Freedom71&
+
+farzad.zami@lexisnexisrisk.com
+Password1
+Letmein11
+
+ViperDemo:
+UserID: farzad.zami@lexisnexisrisk.com
+Password: Password1
+
+DockerMonitor:
+zamif@xpa.rbxd.ds
+Freedom71&
+
+XPS Prod: 
+UserName: regression.user@aptifore.com
+Password: Qr3yl7HK7PkJWwVA
+
+
+peopledeck
+Salesref: 1234a567
+HRhut
+Saleref: 1235b567
+
+B2B
+Freedom71&
+
+##############################Live and OAT#############################
+XPS_50states@xhrus.com
+hQeJ2rPtCkr4GMn2
+
+higherenv@aptifore.ai
+2hu4vqx4vFSJKDeZ
+
+globallandingpagetestuserus@testignore.com
+J62hrwiciNz3O4yw
+
+globallandingpagetestuserGB@testignore.com 
+•	Live - 3FAxOjdClQNrOHHh
+globallandingpagetestuserus@testignore.com
+•	Live - J62hrwiciNz3O4yw
+globallandingpagetestuser_ALL@testignore.com
+•	Live - sgivu7VtvtejxlMB
+globallandingpagetestuser_resistrant@testignore.com
+•	Demo - MLygjMCkenIBfb5o
+•	Live - 21tJ3nDeuuEEsCD6
+globallandingpagetestuser_trialist@testignore.com
+•	Demo - ybSPFJ7Y64cls53l
+•	Live - 5Q9m8ipcONRvpftY
+globallandingpagetestuser_ex-resistrant@testignore.com 
+•	Demo - bzVOgHiiKrOwU9ns
+•	Live - gDMsmuIWDWpC6Uf9
+globallandingpagetestuser_ex-trialist@testignore.com
+•	Demo - uR6xodeY1Pgw4RTP
+•	Live - nppT6rg19ytosPv8
+#######################################################################
+https://policyautomation.us.brightmine.com/
+https://hub.brightmine.com/
+
+LNRS Data Services Inc.
+313 Washington Street, Suite 400, Newton, MA, 02458-1626
+
+
+you'll need to use your XPA credentials NOT your B2B credentials, e.g.
+xpa\zamif

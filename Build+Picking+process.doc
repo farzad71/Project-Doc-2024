@@ -1,0 +1,363 @@
+Date: Mon, 2 Dec 2024 15:30:05 +0000 (UTC)
+Message-ID: <992828561.51.1733153405866@2e94082a5a0e>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_50_825652202.1733153405866"
+
+------=_Part_50_825652202.1733153405866
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Build Picking process</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Build Picking process</h1>
+    <div class=3D"Section1">
+        <h2 id=3D"BuildPickingprocess-Processtofollow"><span>Process to fol=
+low</span></h2>
+<h3 id=3D"BuildPickingprocess-Wednesdayevening"><span>Wednesday evening</sp=
+an></h3>
+<ul>
+<li><span>We usually say the cut off for stories to be picked for the build=
+ is end of Wednesday. This means the regression tests will run against this=
+ code over night and pick up any errors with the build.</span></li>
+<li><span>Make sure what we have in Systest is what we need to release.</sp=
+an></li>
+</ul>
+<h3 id=3D"BuildPickingprocess-Thursday"><span>Thursday<br></span></h3>
+<ol>
+<li>Review the regression test results
+<ul>
+<li>If there is an issue found:
+<ul>
+<li>Is it a known issue / a flaky test? then move on and ignore</li>
+<li>Is it a proper bug? Ask the question whether the story/stories on probl=
+ematic build number needs to go live
+<ul>
+<li>If answer is Yes, Check whether any new commits being added after the b=
+uild number that is in Systest.
+<ul>
+<li>If &nbsp;answer is Yes, talk to Team Lead whether the fix needed is eas=
+y and can be done on a build branch</li>
+<li>If &nbsp;answer is No, talk to the team and ask them not to do any chec=
+k-ins and try to get the fix in</li>
+</ul></li>
+<li>
+<p>If answer is No, then take a previous working build to Systest&nbsp;and =
+validate</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>In the <a href=3D"https://teams.microsoft.com/l/channel/19%3A4469c5fcb7=
+764a5984f9d2d3f1c2bed6%40thread.skype/tab%3A%3A9469d7a5-ebea-4e0a-99a9-39fd=
+8a701f2e?groupId=3D562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274=
+ee3f-9425-4109-a27f-9fb15c10675d" class=3D"external-link" rel=3D"nofollow">=
+Build Numbers spreadsheet,</a> duplicate the sheet for the previous release=
+ and update the sheet name and release date <a href=3D"#BuildPickingprocess=
+-SpreadsheetTemplate">as appropriate</a>.</li>
+<li>Pick the build numbers that have been tested and are ready to release, =
+and update the versions <a href=3D"https://teams.microsoft.com/l/channel/19=
+%3A4469c5fcb7764a5984f9d2d3f1c2bed6%40thread.skype/tab%3A%3A9469d7a5-ebea-4=
+e0a-99a9-39fd8a701f2e?groupId=3D562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;te=
+nantId=3D9274ee3f-9425-4109-a27f-9fb15c10675d" class=3D"external-link" rel=
+=3D"nofollow">Build Numbers spreadsheet</a>. Ask the other testers to help =
+you with their own squad level stories. Use the following to help identify =
+the builds:
+<ol>
+<li><a href=3D"https://jira.xpa.rbxd.ds/secure/RapidBoard.jspa?rapidView=3D=
+208" class=3D"external-link" rel=3D"nofollow">Build Pick an Releases board<=
+/a> in&nbsp;JIRA - which issues are Ready for Showcase? In each issue check=
+ which projects have changes.</li>
+<li><a href=3D"https://dockermonitor.xpa.rbxd.ds/" class=3D"external-link" =
+rel=3D"nofollow">Docker Monitor</a> - which Systest build numbers differ fr=
+om Live? Check which of these new builds have been tested.</li>
+<li>Builds in <a href=3D"http://teamcity.xpa.rbxd.ds:8080/project.html?proj=
+ectId=3DXpertHR&amp;tab=3DprojectOverview" class=3D"external-link" rel=3D"n=
+ofollow">TeamCity </a>- which of the builds between the last released and l=
+atest committed have been tested?</li>
+</ol></li>
+<li>Make sure the selected build numbers are pinned with the 'Released' tag=
+ in TeamCity.&nbsp;</li>
+<li>Move the issues picked for release to "Build pick and Releases" status =
+in Jira.</li>
+<li>Until the lockdown is lifted, complete the <a href=3D"https://reedelsev=
+ier-my.sharepoint.com/:x:/r/personal/pererab_b2b_regn_net/Documents/TestTea=
+m/WeeklyReleaseAssessment.xlsx?d=3Dw17d1e22ccd63405299c4e0c5b816e1da&amp;cs=
+f=3D1&amp;web=3D1&amp;e=3D8yxxcp" class=3D"external-link" rel=3D"nofollow">=
+Weekly Release assessment</a> document.</li>
+<li>Create a release request in <a href=3D"https://rrms/" class=3D"external=
+-link" rel=3D"nofollow">RRMS</a>. This will give us a release request numbe=
+r that can be used for auditing purposes. Make sure the <a href=3D"https://=
+teams.microsoft.com/l/channel/19%3A4469c5fcb7764a5984f9d2d3f1c2bed6%40threa=
+d.skype/tab%3A%3A9469d7a5-ebea-4e0a-99a9-39fd8a701f2e?groupId=3D562b98c7-b6=
+b0-4958-90d2-f60bbe271fee&amp;tenantId=3D9274ee3f-9425-4109-a27f-9fb15c1067=
+5d" class=3D"external-link" rel=3D"nofollow">Build Numbers spreadsheet</a> =
+is updated with this number.</li>
+<li>Send a message in the <a href=3D"https://teams.microsoft.com/l/channel/=
+19%3a4469c5fcb7764a5984f9d2d3f1c2bed6%40thread.skype/Build%2520Pick%2520and=
+%2520Releases?groupId=3D562b98c7-b6b0-4958-90d2-f60bbe271fee&amp;tenantId=
+=3D9274ee3f-9425-4109-a27f-9fb15c10675d" class=3D"external-link" rel=3D"nof=
+ollow">Build Pick and Release Teams channel</a> mentioning the build number=
+s have been selected for the next release.
+<ul>
+<li>Make sure to mention whether there are an extra steps to be included in=
+ the release. These can be seen on the in the <a href=3D"https://jira.xpa.r=
+bxd.ds/secure/RapidBoard.jspa?rapidView=3D208" class=3D"external-link" rel=
+=3D"nofollow">Build Pick and Release board</a>.</li>
+</ul></li>
+<li>Update the UAT environment with the same builds.</li>
+</ol>
+<h4 id=3D"BuildPickingprocess-Note:Thebuildnumbersrepresentthecodeversionth=
+atgoestolive.Pleasekeepthepreviousweekbuildnumberifanassetnotgoingliveordec=
+idedtorevert.">Note : The build numbers represent the code version that goe=
+s to live. Please keep the previous week build number if an asset not going=
+ live or decided to revert.</h4>
+<h3 id=3D"BuildPickingprocess-Friday"><span>Friday</span></h3>
+<ul>
+<li>Be the communicator between the testing team and the release champion f=
+or the release.</li>
+<li>Run the OAT tests in TeamCity.</li>
+<li>Make sure stories are checked. Check with the rest of the testers wheth=
+er they are happy for you to validate the builds in OAT or whether they nee=
+d to do the testing by themselves.</li>
+<li>Make sure all is completed before informing the release champion</li>
+<li>Repeat the same for both legs until the release is completed</li>
+</ul>
+<h3 id=3D"BuildPickingprocess-Tuesday"><span>Tuesday&nbsp;</span></h3>
+<ul>
+<li>Ensure the release request has been fully <strong>approved</strong> bef=
+ore starting.</li>
+<li>Same as Friday, but you are working with Live environment.</li>
+<li>Do not change anything on Live Editor.</li>
+</ul>
+<p><br></p>
+<div>
+<h2 id=3D"BuildPickingprocess-SpreadsheetTemplate">Spreadsheet Template</h2=
+>
+<p><strong>Sheet name format:</strong>&nbsp;LiveReleaseYYYY-MM-DD</p>
+</div>
+<p><strong>Location:</strong>&nbsp;Teams : OG - XpertHR / Channel : Build P=
+ick and Releases / File :Build Numbers&nbsp;</p>
+    </div>
+</body>
+</html>
+------=_Part_50_825652202.1733153405866--

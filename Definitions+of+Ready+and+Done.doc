@@ -1,0 +1,573 @@
+Date: Mon, 2 Dec 2024 15:27:45 +0000 (UTC)
+Message-ID: <1681833848.33.1733153265109@063a6cf221d6>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_32_481204214.1733153265109"
+
+------=_Part_32_481204214.1733153265109
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Definitions of Ready and Done</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Definitions of Ready and Done</h1>
+    <div class=3D"Section1">
+        <h2 id=3D"DefinitionsofReadyandDone-Epics-Ready"><strong>Epics - Re=
+ady</strong></h2>
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"72155141">
+<li data-inline-task-id=3D"21"><strong>Epics overview</strong>: A clear and=
+ concise description of the Epic, outlining its purpose, goals, and expecte=
+d outcomes.</li>
+<li data-inline-task-id=3D"1552"><strong>Initial Architecture design: </str=
+ong>A preliminary technical architectural design to deliver the solution</l=
+i>
+<li data-inline-task-id=3D"22"><strong>Dependencies identified</strong>: An=
+y dependencies or prerequisites required for the successful implementation =
+of the Epic should be identified and addressed.</li>
+<li data-inline-task-id=3D"23"><strong>Scope and boundaries</strong>: The b=
+oundaries of the Epic should be well-defined and agreed upon, ensuring a cl=
+ear understanding of what is included and what is not.</li>
+<li data-inline-task-id=3D"24"><strong>Decomposition plan</strong>: The Epi=
+c may need to be decomposed into smaller, manageable user stories to enable=
+ incremental delivery. The plan for decomposing the Epic should be discusse=
+d and agreed upon.</li>
+<li data-inline-task-id=3D"25"><strong>Prioritization</strong>: The Epic sh=
+ould be prioritized within the product backlog, aligning it with the overal=
+l project goals.</li>
+<li data-inline-task-id=3D"26"><strong>Stakeholder alignment:</strong> Rele=
+vant stakeholders should review and provide input on the Epic to ensure ali=
+gnment with their expectations and needs.</li>
+<li data-inline-task-id=3D"27"><strong>Rough estimation</strong>: A prelimi=
+nary estimation of effort and complexity should be performed to give the te=
+am and stakeholders an idea of the scale of the Epic.</li>
+<li data-inline-task-id=3D"28"><strong>High-level acceptance criteria</stro=
+ng>: Broad acceptance criteria should be established to guide the developme=
+nt of individual user stories within the Epic.</li>
+<li data-inline-task-id=3D"29"><strong>Definition of Done</strong>: The tea=
+m should establish a shared understanding of what it means for the Epic to =
+be considered "done" to ensure a consistent level of completeness.<br><br>
+It is important to note that the Definition of Ready for an Epic can vary d=
+epending on the team and project context. Teams should adapt and refine the=
+ir Definition of Ready as they gain experience and learn from previous iter=
+ations.</li>
+</ul>
+<h2 id=3D"DefinitionsofReadyandDone-Epics-Done"><strong>Epics - Done</stron=
+g></h2>
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"72155141">
+<li data-inline-task-id=3D"30">All user stories within the Epic have been c=
+ompleted and meet their respective DoDs.</li>
+<li data-inline-task-id=3D"31">The Epic has been reviewed and accepted by s=
+takeholders, ensuring alignment with their expectations.</li>
+<li data-inline-task-id=3D"32">All acceptance criteria for the user stories=
+ within the Epic have been met.</li>
+<li data-inline-task-id=3D"33">The Epic has been tested thoroughly, includi=
+ng both functional and non-functional testing.</li>
+<li data-inline-task-id=3D"34">The code associated with the Epic has been r=
+eviewed and meets the team's coding standards and best practices.</li>
+<li data-inline-task-id=3D"35">Any necessary documentation or user guides r=
+elated to the Epic have been created or updated.</li>
+<li data-inline-task-id=3D"36">The Epic has been integrated and tested with=
+in the larger system or application, ensuring compatibility and functionali=
+ty.</li>
+<li data-inline-task-id=3D"37">Performance testing, if applicable, has been=
+ conducted and the Epic meets the required performance criteria.</li>
+<li data-inline-task-id=3D"38">Any outstanding known defects or issues rela=
+ted to the Epic have been addressed or documented appropriately.</li>
+<li data-inline-task-id=3D"39">The Epic has been signed off by the Product =
+Owner or relevant stakeholders as complete and ready for release or deliver=
+y.</li>
+</ul>
+<p><br></p>
+<p>It's important to note that the DoD for an Epic may differ from the DoD =
+for individual user stories, as it encompasses a larger scope. The specific=
+ items in the Definition of Done may vary depending on the team, project, a=
+nd organizational context.</p>
+<h2 id=3D"DefinitionsofReadyandDone-Features-Ready"><strong>Features - Read=
+y</strong></h2>
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"72155141">
+<li data-inline-task-id=3D"40"><span class=3D"legacy-color-text-default"><s=
+trong>Description</strong>: The Feature has a clear and concise description=
+ that communicates its purpose and expected outcome.</span></li>
+<li data-inline-task-id=3D"41"><span class=3D"legacy-color-text-default"><s=
+trong>Acceptance Criteria</strong>: The acceptance criteria for the Feature=
+ are defined and agreed upon by the development team and stakeholders, ensu=
+ring a shared understanding of what needs to be accomplished.</span></li>
+<li data-inline-task-id=3D"42"><span class=3D"legacy-color-text-default"><s=
+trong>Dependencies</strong>: Any dependencies or prerequisites required for=
+ implementing the Feature are identified and resolved or planned for approp=
+riately.</span></li>
+<li data-inline-task-id=3D"43"><span class=3D"legacy-color-text-default"><s=
+trong>Estimates and Prioritization</strong>: The effort required to impleme=
+nt the Feature has been estimated, and its priority has been determined wit=
+hin the product backlog.</span></li>
+<li data-inline-task-id=3D"44"><span class=3D"legacy-color-text-default"><s=
+trong>Design and UI</strong>: The necessary design details and user interfa=
+ce specifications, such as mockups or wireframes, are provided to guide the=
+ development process.</span></li>
+<li data-inline-task-id=3D"45"><span class=3D"legacy-color-text-default"><s=
+trong>Stakeholder Alignment</strong>: The Feature has been reviewed and app=
+roved by the relevant stakeholders, ensuring alignment with their expectati=
+ons and needs.</span></li>
+<li data-inline-task-id=3D"46"><span class=3D"legacy-color-text-default"><s=
+trong>Testability</strong>: The Feature is testable, and any specific testi=
+ng requirements or considerations are identified.</span></li>
+<li data-inline-task-id=3D"47"><span class=3D"legacy-color-text-default"><s=
+trong>Definition of Done</strong>: The team has a shared understanding of w=
+hat it means for the Feature to be considered "done" and meets the team's D=
+efinition of Done criteria.</span></li>
+<li data-inline-task-id=3D"48"><span class=3D"legacy-color-text-default"><s=
+trong>Backlog Refinement</strong>: The Feature has been discussed and refin=
+ed, ensuring that it is sufficiently understood by the team.</span></li>
+<li data-inline-task-id=3D"71"><strong style=3D"letter-spacing: 0.0px;" cla=
+ss=3D"legacy-color-text-default">Dependencies and Risks</strong><span style=
+=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-default">: Any poten=
+tial risks or dependencies associated with the Feature have been identified=
+ and addressed to mitigate their impact.</span></li>
+</ul>
+<p><br>
+It is important to note that the specific criteria within the Definition of=
+ Ready for Features can vary based on the team's preferences, project requi=
+rements, and Agile methodology being followed.</p>
+<h2 id=3D"DefinitionsofReadyandDone-Features-Done"><strong>Features - Done<=
+/strong></h2>
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"72155141">
+<li data-inline-task-id=3D"50"><strong>Code implementation</strong>: The fe=
+ature's code has been developed and meets the team's coding standards and b=
+est practices.</li>
+<li data-inline-task-id=3D"51"><strong>Unit testing</strong>: The feature h=
+as been thoroughly unit tested to ensure that it functions correctly and as=
+ expected.</li>
+<li data-inline-task-id=3D"52"><strong>Integration testing:</strong> The fe=
+ature has been integrated into the larger system or application and passes =
+integration tests to verify compatibility and functionality.</li>
+<li data-inline-task-id=3D"53"><strong>Acceptance criteria met:</strong> Th=
+e feature has met all the agreed-upon acceptance criteria, as defined in th=
+e user story or feature requirements.</li>
+<li data-inline-task-id=3D"54"><strong>System testing:</strong> The feature=
+ has undergone system or end-to-end testing to ensure that it works harmoni=
+ously with other components or systems within the application.</li>
+<li data-inline-task-id=3D"55"><strong>User interface (UI) review:</strong>=
+ If applicable, the UI of the feature has been reviewed and approved by the=
+ stakeholders for usability, consistency, and adherence to design guideline=
+s.</li>
+<li data-inline-task-id=3D"56"><strong>Performance testing:</strong> The fe=
+ature has been tested to meet the required performance standards, such as r=
+esponse time, scalability, or resource usage.</li>
+<li data-inline-task-id=3D"57"><strong>Documentation:</strong> The necessar=
+y documentation, such as user guides, API documentation, or technical speci=
+fications, has been created or updated to reflect the changes introduced by=
+ the feature.</li>
+<li data-inline-task-id=3D"58"><strong>Quality assurance review:</strong> T=
+he feature has passed quality assurance review processes, including code re=
+views and peer reviews, to ensure its quality and maintainability.</li>
+<li data-inline-task-id=3D"59"><strong>Stakeholder approval:</strong> The f=
+eature has been reviewed and approved by the stakeholders, indicating their=
+ satisfaction with the delivered functionality.</li>
+<li data-inline-task-id=3D"60"><strong>Regression testing:</strong> The fea=
+ture has not introduced any new defects or regression issues in existing fu=
+nctionality, verified through regression testing.</li>
+<li data-inline-task-id=3D"61"><strong>Deployment readiness:</strong> The f=
+eature is ready for deployment and release, including relevant configuratio=
+n changes and deployment instructions.</li>
+</ul>
+<p>It is important to adapt the Definition of Done to fit the specific need=
+s and context of the development team and project. As such, the actual item=
+s and criteria in the Definition of Done may vary.</p>
+<h2 id=3D"DefinitionsofReadyandDone-UPDATED-Userstories-Ready"><strong>UPDA=
+TED - User stories - Ready</strong></h2>
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"72155141">
+<li data-inline-task-id=3D"62"><span class=3D"legacy-color-text-green2"><em=
+><strong>User story title and description:</strong> The user story should h=
+ave a clear and concise title that represents the feature or functionality =
+being developed. The description should provide enough context and detail f=
+or the development team to understand the user's needs.</em></span></li>
+<li data-inline-task-id=3D"63"><span class=3D"legacy-color-text-green2"><em=
+><strong>Acceptance criteria:</strong> The specific conditions or requireme=
+nts that need to be met for the user story to be considered complete should=
+ be defined. These criteria serve as measurable outcomes or tests to verify=
+ that the user story has been implemented correctly.</em></span></li>
+<li data-inline-task-id=3D"64"><span class=3D"legacy-color-text-green2"><em=
+><strong>User value:</strong> The user story should demonstrate value or so=
+lve a problem for the end user. It should align with the overall goals and =
+objectives of the product or project.</em></span></li>
+<li data-inline-task-id=3D"65"><span class=3D"legacy-color-text-green2"><em=
+><strong>Dependencies identified:</strong> Any dependencies on other user s=
+tories, features, or external factors should be identified, and plans to ad=
+dress these dependencies should be in place. This ensures that there are no=
+ roadblocks to completing the user story.</em></span></li>
+<li data-inline-task-id=3D"66"><span class=3D"legacy-color-text-green2"><em=
+><strong>Estimation:</strong> The development team should have estimated th=
+e effort and complexity required to implement the user story. This enables =
+proper planning and prioritization during sprint or iteration planning.</em=
+></span></li>
+<li data-inline-task-id=3D"67"><span class=3D"legacy-color-text-green2"><em=
+><strong>Size and scope:</strong> The user story should be appropriately si=
+zed to fit within a single sprint or iteration. It should have a clear scop=
+e that is manageable and achievable within the time frame.</em></span></li>
+<li data-inline-task-id=3D"68"><span class=3D"legacy-color-text-green2"><em=
+><strong>Testability:</strong> The user story should be testable, meaning t=
+hat it can be adequately validated against the defined acceptance criteria.=
+ Any specific testing requirements or considerations should be identified.<=
+/em></span></li>
+<li data-inline-task-id=3D"69"><span class=3D"legacy-color-text-green2"><em=
+><strong>Stakeholder input and involvement:</strong> The user story should =
+have been reviewed and approved by the relevant stakeholders, ensuring thei=
+r agreement on the expected outcomes.</em></span></li>
+<li data-inline-task-id=3D"70"><span class=3D"legacy-color-text-green2"><em=
+><strong>Definition of Done alignment:</strong> The user story should align=
+ with the team's Definition of Done, ensuring a common understanding of the=
+ level of completeness required for the user story.</em></span></li>
+</ul>
+<p><span class=3D"legacy-color-text-green2"><em>It's important to note that=
+ the Definition of Ready can vary across teams and projects. The specific e=
+lements may be tailored to fit the team's needs and development process.</e=
+m></span></p>
+<p><br></p>
+<p><span class=3D"legacy-color-text-default"><strong>The criteria that a sp=
+ecific user story has to meet before being considered for estimation or inc=
+lusion into a sprint.</strong></span></p>
+<p><strong>When story is considered to be "ready" for development</strong><=
+/p>
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"72155141">
+<li data-inline-task-id=3D"8">User story is <strong>Independent</strong>
+<ul>
+<li>Dependencies are identified</li>
+<li>All known blockers are removed</li>
+</ul></li>
+<li data-inline-task-id=3D"9">User story is <strong>Negotiable</strong></li=
+>
+<li data-inline-task-id=3D"10">User story is <strong>Valuable</strong>
+<ul>
+<li>User story is clearly understood by the whole squad and understand WHY =
+we are doing it.</li>
+</ul></li>
+<li data-inline-task-id=3D"11">User story is <strong>Estimable</strong>
+<ul>
+<li>User story is broken down appropriately and small enough to be able to =
+estimate.</li>
+<li>User story should have enough details for the squad to estimate.</li>
+<li>Acceptance criteria are clearly outlined.</li>
+</ul></li>
+<li data-inline-task-id=3D"12">User story is <strong>Sized-Appropriately</s=
+trong>
+<ul>
+<li>User story is sized, estimated and feasible to complete within a sprint=
+</li>
+<li>User story's size is defined by Dev Team</li>
+</ul></li>
+<li data-inline-task-id=3D"13">User story is <strong>Testable</strong>
+<ul>
+<li>User story has a test strategy and know what level of test coverage we =
+are expecting:
+<ul>
+<li>Manual</li>
+<li>Unit</li>
+<li>Feature, E2E (Liveflo)</li>
+<li>Integration (I.e. interaction between our applications including with t=
+hird parties + integration points with higher environment)</li>
+<li>Regression</li>
+<li>Smoke (I.e. does the website load after a deployment)</li>
+</ul></li>
+</ul></li>
+<li data-inline-task-id=3D"14">User story is <strong>Measurable</strong>
+<ul>
+<li>Success metrics are identified</li>
+</ul></li>
+<li data-inline-task-id=3D"18">User story is <strong>Releasable</strong>
+<ul>
+<li>Release plan defined and understood by the whole squad (e.g. WIP)</li>
+</ul></li>
+<li data-inline-task-id=3D"19">User story does not have an impact on Securi=
+ty and Performance</li>
+<li data-inline-task-id=3D"20">Internal and External communications are pla=
+nned
+<ul>
+<li>Awareness and approval of the changes (if applicable)</li>
+</ul></li>
+</ul>
+<h2 id=3D"DefinitionsofReadyandDone-Userstories-Done"><strong>User stories =
+- </strong><strong>Done</strong></h2>
+<p><strong><span class=3D"legacy-color-text-default">The agreed upon accept=
+ance criteria that the Product Owner will use to accept the product increme=
+nt at the end of the sprint.</span></strong></p>
+<p><strong>Pull Request Stage:</strong></p>
+<ul>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">All switchable configuration parameters are present in Hieradata for the =
+project, and documented in the Readme file.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">secrets.example.json or equivalent is fully up to date.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Readme file is updated.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">No secrets are present.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">You have tested your own code on the Dev environment.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Any code refactoring that affects other squads has been communicated to t=
+he applicable squad/s. (Add a member of that squad to your pull request if =
+required.)</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">In-house algorithms or custom functionality are sufficiently unit tested.=
+</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Solving MEND, Dependabot or any reported security issues on your feature =
+branch.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">If any API's are updated or added, make sure the swagger docs are updated=
+ for those API endpoints</span></li>
+</ul>
+<p><br><strong>Post Testing Stage:</strong></p>
+<ul>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Acceptance Criteria - AC checked and met.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Stakeholders - Must have gone through PO/stakeholder feedback.</span></li=
+>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Code has been through the testing process.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">End-to-end test coverage acceptable.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Further tasks - Follow up work added to board.(Including Technical debt -=
+ any accepted technical debts or defects have a relevant backlog item to wo=
+rk on).</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">GDPR compliant - We are fully compliant and have no sensitive data in log=
+s for example.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Pipeline is green - Unit testing/ integration tests passed.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Solving MEND, Dependabot or any reported security issues in Main branch.<=
+/span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Observability standards - make sure we have sufficient logging in place t=
+o troubleshoot if any issues.</span></li>
+<li><span style=3D"letter-spacing: 0.0px;" class=3D"legacy-color-text-blue3=
+">Necessary Regression testing has taken place.</span></li>
+</ul>
+<p><br></p>
+    </div>
+</body>
+</html>
+------=_Part_32_481204214.1733153265109--
